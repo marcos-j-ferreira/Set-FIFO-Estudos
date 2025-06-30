@@ -1,13 +1,21 @@
 package com.fifo;
 
+import com.fifo.repository.RepositoryUser;
+
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
+public class App {
+
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        RepositoryUser repo = new RepositoryUser();
+        repo.add("marcos");
+        repo.exibir();
+
+        
     }
 }
