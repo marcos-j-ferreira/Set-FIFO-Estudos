@@ -3,7 +3,7 @@ package com.fifo.model;
 public class User{
     private String nome;
 
-    User(String nome){
+    public User(String nome){
         this.nome = nome;
     }
 
@@ -16,6 +16,19 @@ public class User{
 
     public final String getNome(){
         return nome;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o)  return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return nome.equalsIgnoreCase(user.nome); 
+    }
+
+    @Override
+    public int hashCode(){
+        return nome.toLowerCase().hashCode();
     }
 
 }

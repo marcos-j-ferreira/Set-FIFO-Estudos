@@ -10,29 +10,24 @@ package com.fifo.repository;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.fifo.model.User;
+import com.fifo.model.*;
 
 public class RepositoryUser{
 
-    private Set<String> usuarios = new HashSet<>();
+    private Set<User> usuarios = new HashSet<>();
 
-    public final void add(String value){
-
-        if(value == null){
-            System.out.println("Digite um valor valido");
-        }else{
-            usuarios.add(value);
-            System.out.println("Foi");
-        }
+    public boolean add(User user){
+        return usuarios.add(user);
     }
 
-    public final void exibir(){
-
-        for(String u: usuarios ){
-            System.out.println(u);
-        }
+    public boolean remove(User user){
+        return usuarios.remove(user);
     }
 
-
+    public List<User> getAll(){
+        return new ArrayList<>(usuarios);
+    }
 }
