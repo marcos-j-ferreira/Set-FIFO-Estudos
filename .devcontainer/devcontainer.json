@@ -1,0 +1,7 @@
+{
+  "name": "Java JPA Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "PostgreSQL",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [5432]  // Porta do PostgreSQL
+}
